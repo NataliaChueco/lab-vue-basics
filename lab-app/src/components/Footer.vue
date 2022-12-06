@@ -1,7 +1,8 @@
 <template>
     <div class="md:w-auto text-center py-6 px-4 container mx-auto text-gray-500 text-sm  ">
         <div class="md:flex justify-between items-center">
-            <div class="mb-4 md:mb-0">Footer example with <span class="text-red-500">♥</span>. Here probably should go some footer content.</div>
+            <div class="mb-4 md:mb-0">Footer example with <span class="text-red-500">♥</span>. 
+                Here probably should go some footer content but some javascript math is {{(2+2)}} and {{showString()}}</div>
 
             <div class="flex justify-center">
             <div class="w-8 text-gray-500">
@@ -33,5 +34,12 @@
     </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from "vue";
+
+function showString(){
+    let displayedString = ref("I am from inside the funciton, wow");
+    return displayedString;
+}
+
 </script>
